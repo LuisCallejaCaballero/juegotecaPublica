@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="game.js"></script>
+</head>
+<body>
+    <div class="game-wrapper">
+        <div class="game-container">
+            <h1>TETRIS</h1>
+            
+            <div id="game-over-modal" class="modal hidden">
+                <div class="modal-content">
+                    <h2>¡Game Over!</h2>
+                    <p>Puntuación: <span id="final-score">0</span></p>
+                    <button id="restart-button">Jugar de nuevo</button>
+                    <a href="../../../"><button id="back-button">Volver</button></a>
+                </div>
+            </div>
+
+            <div class="game-area">
+                <canvas id="tetris"></canvas>
+                
+                <div class="side-panel">
+                    <div class="info-panel">
+                        <div class="info">
+                            <p>Puntuación: <span id="score">0</span></p>
+                            <p>Nivel: <span id="level">1</span></p>
+                            <p>Líneas: <span id="lines">0</span></p>
+                        </div>
+                        
+                        <div class="next-piece-container">
+                            <p>Próxima:</p>
+                            <canvas id="next-piece"></canvas>
+                        </div>
+                        
+                        <div class="hold-piece-container">
+                            <p>Hold:</p>
+                            <canvas id="hold-piece"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="controls">
+                        <p>Controles:</p>
+                        <ul>
+                            <li>← → : Mover</li>
+                            <li>↑ : Rotar</li>
+                            <li>↓ : Bajar</li>
+                            <li>Espacio: Caída rápida</li>
+                            <li>C : Guardar pieza</li>
+                            <li>P : Pausa</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor de mensajes -->
+    <div id="messageContainer" style="display: none; padding: 10px; background-color: #e1e1e1; border-radius: 5px; margin-top: 10px;">
+        <span id="messageText"></span>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

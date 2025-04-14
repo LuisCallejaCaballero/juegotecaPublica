@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RACE&QUIZ KENIA</title>
+    <link rel="stylesheet" href="./css.css">
+    <link rel="icon" type="image/x-icon" href="./img/icon.png">
+    
+</head>
+
+<body>
+    <div id="ventanaModal" class="modal">
+        <div class="contenido-modal">
+            <span class="cerrar">&times;</span>
+            <h2 style="text-align: center;">INSTRUCCIONES</h2>
+            <div id="cuadricula">
+                <div id="movimiento">
+                    <h2 style="position: absolute; right: 390px; top: 120px;">+1</h2>
+                    <h2 style="position: absolute; right: 305px; top: 123px;">+3</h2>
+                    <h2 style="position: absolute; right: 220px; top: 120px;">+6</h2>
+                    <img src="./img/interrogante.png" width="65px" style="margin-left: 170px; margin-bottom: 18px;">
+                    <img src="./img/interrogante_especial.png" width="80px"
+                        style="margin-top: 80px; margin-left: 10px; margin-right: 10px;">
+                    <img src="./img/interrogante_super_especial.png" width="65px" style=" margin-bottom: 18px;">
+                    <h2 style="text-align: center; margin-top: 30px;">RECOLECTA PARA CONSEGUIR PUNTOS</h2>
+                </div>
+                <div id="recolectar">
+                    <img src="./img/left.svg" width="65px" style="margin-left: 130px; margin-bottom: 18px;">
+                    <img src="./img/car.png" width="80px"
+                        style="margin-top: 80px; margin-left: 40px; margin-right: 40px;">
+                    <img src="./img/right.svg" width="65px" style=" margin-bottom: 18px;">
+                    <h2 style="text-align: center;">MUEVETE CON LAS FLECHAS DEL TECLADO</h2>
+                </div>
+                <div id="responder">
+                    <img src="./img/CRONO.png" width="150px" style=" margin-bottom: 18px;">
+                    <img src="./img/animals/jirafa.png" width="90px" style=" margin-bottom: 18px;">
+                    <img src="./img/animals/elefante.png" width="90px" style=" margin-bottom: 18px;">
+                    <img src="./img/animals/rinoceronte.png" width="90px" style=" margin-bottom: 18px;">
+                    <img src="./img/animals/mono.png" width="90px" style=" margin-bottom: 18px;">
+                    <h2 style="text-align: center; margin-top: 30px;">RECUPERA TODOS LOS ANIMALES A TIEMPO</h2>
+                </div>
+                <div id="finaliza">
+                    <div>
+                        <img src="./img/questionario.PNG" height="190px" width="220px"
+                            style="margin-top: 10px;margin-left: 180px;">
+                    </div>
+                    <h2 style="text-align: center;">RESPONDE LAS PREGUNTAS DE LA FAUNA</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="game">
+        <div id="contador-tiempo">Tiempo: 5:00</div>
+        <a href="../../index.php" style="   background-color: #000000; /* Green */
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px; width: 70px; margin-left: -1400px; margin-top: 30px; height:20px; text-align: center;">HOME</a>
+        <button id="start">START</button>
+        
+        <a href="../../../"><button id="contador-tiempo" style="margin-left: 200px; width: 12%; background-color: red; cursor: pointer;">VOLVER</button></a>
+        <button class="info" id="abrirModal">HOW PLAY?</button>
+        <div id="mycar"><img id="mycarimg" class="mycarimg" src="./img/car.png"></div>
+        <div id="marcador">
+            <h1 id="items"></h1>
+            <div id="animals">
+                <h1 id="leon"></h1>
+                <h1 id="zebra"></h1>
+                <h1 id="jirafa"></h1>
+                <h1 id="cocodrilo"></h1>
+                <h1 id="buey"></h1>
+                <h1 id="elefante"></h1>
+                <h1 id="hipopotamo"></h1>
+                <h1 id="tigre"></h1>
+                <h1 id="mono"></h1>
+                <h1 id="rinoceronte"></h1>
+            </div>
+        </div>
+        <div id="road"></div>
+        <div id="objetos"></div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <img id="bossImage" src="">
+            <h2 id="boss"></h2>
+            <p id="question"></p>
+            <form id="quizForm">
+                <div id="options">
+                    <label>
+                        <input>
+                    </label>
+                    <label>
+                        <input>
+                    </label>
+                    <label>
+                        <input>
+                    </label>
+                </div>
+                <button type="button" id="checkAnswer" onclick="checkAnswer()" class="myButton">COMPROBAR</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="./js.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sopa de letras</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+        <!-- Dependencias -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" crossorigin="anonymous"></script>
+    <script src="wordfind.js"></script>
+    <script src="wordfindgame.js"></script>
+</head>
+
+<body>
+    <!-- Estructura de la sopa de letras-->
+    <div class="titulo">Sopa de Letras</div>
+    <input type="button" id="BTNresolver" value="Resolver sopa de letras" />
+    <input type="button" value="Reiniciar la sopa de letras" id="BTNrefresh">
+    <div id="contenedor"></div>
+    <div id="palabras-sopadeletras"></div>
+
+    <!-- Construcción de la sopa de letras -->
+    <script>
+        // Array con las palabras que el usuario debe buscar
+        var palabras = ['memoria', 'bingo', 'movil',
+            'sorpresa', 'ventana', 'armario',
+            'cuidado', 'cuchara', 'tristeza',
+            'alegria', 'miedo', 'esperanza',
+            'ansiedad', 'frustracion', 'confianza',
+            'preocupacion', 'mesa',
+            'silla', 'vaso','enfado', 'cuchillo', 'tenedor'
+        ];
+
+        // Comienza un juego de palabras
+        var sopaLetras = wordfindgame.create(palabras, '#contenedor', '#palabras-sopadeletras');
+
+        // Función para resolver la sopa de petras             
+        $("#BTNresolver").click(function () {
+            var resultado = wordfindgame.solve(sopaLetras, palabras);
+            console.log(resultado);
+        });
+
+        // Función para reiniciar la sopa de letras
+        $("#BTNrefresh").click(function () {
+            window.location.href = window.location.href;
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,328 @@
+/* AJUSTES GLOBALES *//* AJUSTES GLOBALES *//* AJUSTES GLOBALES *//* AJUSTES GLOBALES *//* AJUSTES GLOBALES *//* AJUSTES GLOBALES *//* AJUSTES GLOBALES */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Desactivar scrollbar y la opción de hacer scroll */
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background: url(./img/background.jpg) no-repeat center;
+    background-size: cover;
+}
+/* AJUSTES GLOBALES *//* AJUSTES GLOBALES *//* AJUSTES GLOBALES *//* AJUSTES GLOBALES *//* AJUSTES GLOBALES *//* AJUSTES GLOBALES *//* AJUSTES GLOBALES *//* AJUSTES GLOBALES */
+
+
+
+
+/* POP UP HOW TO PLAY? *//* POP UP HOW TO PLAY? *//* POP UP HOW TO PLAY? *//* POP UP HOW TO PLAY? *//* POP UP HOW TO PLAY? *//* POP UP HOW TO PLAY? *//* POP UP HOW TO PLAY? */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 101;
+}
+
+#cuadricula{
+    width: 1150px;
+    height: 520px;
+    
+}
+
+#movimiento{
+    float: right;
+    width: 575px;
+    height: 250px;
+    border-width: 5px;
+    border-color: #000;
+    border-style: solid;
+}
+
+#recolectar{
+    width: 565px;
+    height: 250px;
+    border-width: 5px;
+    border-color: #000;
+    border-style: solid;
+}
+
+#responder{
+    float: right;
+    width: 565px;
+    height: 250px;
+    border-width: 5px;
+    border-color: #000;
+    border-style: solid;
+}
+
+#finaliza{
+    float: left;
+    width: 565px;
+    height: 250px;
+    border-width: 5px;
+    border-color: #000;
+    border-style: solid;
+}
+
+.contenido-modal {
+    position: relative;
+    background-color: #7b7878;
+    margin: auto;
+    padding: 20px;
+    width: 60%;
+    -webkit-animation-name: animarsuperior;
+    -webkit-animation-duration: 0.5s;
+    animation-name: animarsuperior;
+    animation-duration: 0.5s;
+    border-radius: 20px;
+}
+
+/* Animacion abrir popup */
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animarsuperior {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* Botón cerrar pop up */
+.close {
+    color: rgb(255, 0, 0);
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Botón cerrar pop up */
+
+
+/* POP UP HOW TO PLAY? *//* POP UP HOW TO PLAY? *//* POP UP HOW TO PLAY? *//* POP UP HOW TO PLAY? *//* POP UP HOW TO PLAY? *//* POP UP HOW TO PLAY? *//* POP UP HOW TO PLAY? */
+
+
+
+
+
+/* GAME SCREEN *//* GAME SCREEN *//* GAME SCREEN *//* GAME SCREEN *//* GAME SCREEN *//* GAME SCREEN *//* GAME SCREEN *//* GAME SCREEN *//* GAME SCREEN *//* GAME SCREEN */
+.game {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+#road {
+    background: url(./img/road.png) repeat-y;
+    height: 1200vh;
+    width: 600px;
+    position: relative;
+    top: -80vh;
+    z-index: -9;
+}
+
+/* BOTONES PRINCIPALES *//* BOTONES PRINCIPALES */
+#start {
+    position: absolute;
+    margin-right: 125px;
+    z-index: 100;
+    font-size: 2rem;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.info {
+    position: absolute;
+    margin-left: 207px;
+    z-index: 100;
+    font-size: 2rem;
+    background-color: rgb(71, 107, 225);
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+/* BOTONES PRINCIPALES *//* BOTONES PRINCIPALES */
+
+.myButton {
+    box-shadow: 0px 1px 0px 0px #fff6af;
+    background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+    background-color: #ffec64;
+    border-radius: 6px;
+    border: 1px solid #ffaa22;
+    display: inline-block;
+    cursor: pointer;
+    color: #333333;
+    font-family: Impact;
+    font-size: 15px;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffee66;
+}
+
+.myButton:hover {
+    background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+    background-color: #ffab23;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
+
+#contador-tiempo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    padding: 5px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#marcador {
+    position: absolute;
+    margin-right: -1529px;
+    margin-top: 00px;
+    width: 390px;
+    height: 960px;
+    border-radius: 10px;
+    border-color: black;
+    background-color: rgb(223, 147, 84);
+}
+
+#items {
+    margin-left: 30px;
+    margin-top: 70px;
+}
+
+.mycarimg {
+    width: 100px;
+}
+
+#mycar {
+    position: relative;
+    top: 80vh;
+}
+
+.interrogante {
+    width: 64px;
+    height: 64px;
+    background-image: url(./img/interrogante.png);
+    position: absolute;
+    animation: fall 2s linear infinite;
+}
+
+.interrogante_especial {
+    width: 64px;
+    height: 64px;
+    background-image: url(./img/interrogante_especial.png);
+    position: absolute;
+    animation: fall 1s linear infinite;
+}
+
+.interrogante_super_especial {
+    width: 64px;
+    height: 64px;
+    background-image: url(./img/interrogante_super_especial.png);
+    position: absolute;
+    animation: fall 0.7s linear infinite;
+}
+/* GAME SCREEN *//* GAME SCREEN *//* GAME SCREEN *//* GAME SCREEN *//* GAME SCREEN *//* GAME SCREEN *//* GAME SCREEN *//* GAME SCREEN *//* GAME SCREEN */
+
+
+
+
+
+
+
+
+/* QUESTIONARIO *//* QUESTIONARIO *//* QUESTIONARIO *//* QUESTIONARIO *//* QUESTIONARIO *//* QUESTIONARIO *//* QUESTIONARIO *//* QUESTIONARIO *//* QUESTIONARIO */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 5px;
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+}
+#cuestionario {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.cerrar {
+    color: #000000;
+    cursor: pointer;
+}
+
+@keyframes fall {
+    0% {
+        top: -20px;
+    }
+
+    100% {
+        top: 100vh;
+    }
+}
+
+@keyframes roadanimation {
+    0% {
+        top: -1100vh;
+    }
+
+    100% {
+        top: -200vh;
+    }
+}
+/* QUESTIONARIO *//* QUESTIONARIO *//* QUESTIONARIO *//* QUESTIONARIO *//* QUESTIONARIO *//* QUESTIONARIO *//* QUESTIONARIO *//* QUESTIONARIO *//* QUESTIONARIO */

@@ -1,0 +1,146 @@
+/* Contenedor principal */
+.app-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Estilos de las cards */
+.card-info-container {
+  display: flex;
+  background-color: #111;
+  color: #eee;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  transition: all 0.3s ease;
+}
+
+.card-info-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffc3, 0 0 30px #00ffc3;
+}
+
+/* Estlo texto */
+.text-content {
+  flex: 1;
+  padding-right: 30px; 
+  padding-left: 0; 
+  text-align: left; 
+  direction: ltr; 
+}
+
+
+.game-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #00ffaa;
+}
+
+.section {
+  margin-bottom: 25px;
+}
+
+.section-title {
+  font-size: 1.8em;
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+.section-content {
+  line-height: 1.6;
+}
+
+.section-list {
+  list-style: none;
+  padding: 0;
+}
+
+.section-list li {
+  margin-bottom: 5px;
+}
+
+.button-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.play-button,
+.ranking-button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.play-button {
+  background-color: #00ffaa;
+  color: #111;
+}
+
+.ranking-button {
+  background-color: #333;
+  color: #eee;
+}
+
+.play-button:hover {
+  background-color: #00cc88;
+}
+
+.ranking-button:hover {
+  background-color: #555;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mock-image {
+  background-color: #000;
+  border-radius: 5px;
+  width: 700px;
+  height: 320px;
+  position: relative;
+  overflow: hidden;
+  border: #00ffaa 7px inset;
+}
+
+.game-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-info-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .text-content {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .image-container {
+    width: 100%;
+  }
+
+  .mock-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 200/150;
+  }
+}

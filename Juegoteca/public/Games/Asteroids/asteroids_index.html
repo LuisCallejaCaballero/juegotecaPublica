@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Nave Espacial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    
+    <div id="gameUI">
+        <div>Puntuación: <span id="score">0</span></div>
+        <div>Vidas:</div>
+        <div class="lives-container" id="lives"></div>
+    </div>
+    
+    <div id="gameOver">
+        <h1>¡GAME OVER!</h1>
+        <p>Puntuación final: <span id="finalScore">0</span></p>
+        <button id="restartButton">Jugar de nuevo</button>
+        <a href="../../../"><button id="back-button">Volver</button></a>
+    </div>
+    
+    <div id="startScreen">
+        <h1>NAVE ESPACIAL</h1>
+        <p>Destruye los asteroides y sobrevive el mayor tiempo posible</p>
+        <button id="startButton">Comenzar juego</button>
+        <div class="controls">
+            <p><strong>Controles:</strong></p>
+            <p>Flechas o WASD para moverte</p>
+            <p>ESPACIO para disparar</p>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
