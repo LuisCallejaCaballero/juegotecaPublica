@@ -1,5 +1,5 @@
 import { finalScore } from './game.js'; // Ajusta la ruta si es necesario
-//import { supabase } from '../../../src/assets/supabaseClient.js'; // Asegúrate de tener este archivo configurado
+import { supabase } from '../../../src/assets/supabaseClient.js'; // Asegúrate de tener este archivo configurado
 
 export async function saveScoreToSupabase(user) {
     if (!user || finalScore == null) return;
