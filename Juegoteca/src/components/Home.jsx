@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import CardGame from "../components/CardGame";
-//mport { supabase } from "../assets/supabaseClient";
+import { supabase } from "../assets/supabaseClient";
 import HeroSlider from "../components/HeroSlider";
 import { Link } from "react-router-dom";
 import "../App.css";
