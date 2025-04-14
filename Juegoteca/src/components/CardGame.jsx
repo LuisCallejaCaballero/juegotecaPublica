@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom"; // Asegúrate de importar Link
 import "../components_css/CardGame.css";
-import { supabase } from "../../supabaseClient";
+import { supabase } from "../assets/supabaseClient";
 
 const CardGame = ({
   reverse,
